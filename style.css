@@ -1,0 +1,102 @@
+:root {
+    --primary-color: #132951;
+    --secondary-color: #ddd
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f4f4f9;
+    font-family: 'Roboto', sans-serif;
+}
+
+#menu .btn{
+    padding: .8em;
+    margin-top: 1em;
+}
+
+.logo {
+    width: 4em;
+}
+
+main {
+    background-color: #ffffff;
+    padding: .5rem 1.2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 25rem;
+    width: 90%;
+    text-align: center;
+}
+
+section p, label {
+    margin-top: .5rem;
+    font-size: 1em;
+    color: #333333;
+}
+
+input::placeholder {
+    font-size: 1em;
+}
+
+section input[type="number"],
+section input[type="time"],
+.btn {
+    width: 100%;
+    padding: 0.4rem;
+    margin-top: 0.4rem;
+    border: 1px solid var(--secondary-color);
+    border-radius: 5px;
+    font-size: .8em;
+    outline: none;
+    text-align: center;
+}
+
+section input[type="number"]:focus,
+section input[type="time"]:focus,
+.btn:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+.btn, .btn-voltar{
+    margin-top: 1.2em;
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 0.5rem 1.2rem;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+.btn-voltar{
+    width: 50%;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.resultado {
+    display: flex;
+    height: 2rem;
+    margin-top: .5rem;
+    font-size: 1.2em;
+    color: var(--primary-color);
+    border: 1px solid var(--secondary-color);
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculadora Koch</title>
+    <link rel="icon" href="logo-koch.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <img src="logo-koch.png" alt="Logo-superkoch" class="logo">
+    </header>
+
+    <main>
+        
+        <section id="menu">
+            <button class="btn" onclick="mostrarFormulario(1)">Calculadora com cx de papelão</button>
+            <button class="btn" onclick="mostrarFormulario(2)">Calculadora sem cx de papelão</button>
+            <button class="btn" onclick="mostrarFormulario(3)">Calculadora horário</button>
+        </section>
+
+        <section id="formulario1" style="display: none;">
+            <p class="taraEmbalagem">Tara embalagem:<input type="number" id="taraEmbalagem" placeholder="EX: 10"
+                    required autocomplete="off"></p>
+            <p class="qtdPeca">Quantidade de peças:<input type="number" id="qtdPeca" placeholder="EX: 25" required
+                    autocomplete="off"></p>
+            <p class="qtdcaixa">Quantidade de caixas:<input type="number" id="qtdcaixaa" placeholder="EX: 8" required
+                    autocomplete="off"></p>
+            <p class="taraCaixa">Tara da caixa:<input type="number" id="taraCaixa" placeholder="EX: 0.685" required
+                    autocomplete="off"></p>
+            <p class="pesoBalanca">Peso da balança:<input type="number" id="pesoBalanca" placeholder="EX: 100" required
+                    autocomplete="off"></p>
+            <button class="btn" onclick="calcularTaraPapelao()">Calcular</button>
+            <p class="resultado-liquido">Peso liquido:</p>
+            <p class="resultado" id="resultado"></p>
+            <button class="btn btn-voltar" onclick="voltarMenu()">Voltar</button>
+        </section>
+
+        <section id="formulario2" style="display: none;">
+            <p class="tara">Tara embalagem:<input type="number" id="tara" placeholder="EX: 10" required
+                    autocomplete="off"></p>
+            <p class="qtdPeca">Quantidade de peças:<input type="number" id="qtdPeca2" placeholder="EX: 25" required
+                    autocomplete="off"></p>
+            <p class="pesoBalanca">Peso da balança:<input type="number" id="pesoBalanca2" placeholder="EX: 100" required
+                    autocomplete="off"></p>
+            <button class="btn" onclick="calcularTara()">Calcular</button>
+            <p class="resultado-liquido">Peso liquido:</p>
+            <p class="resultado" id="resultado2"></p>
+            <button class="btn btn-voltar" onclick="voltarMenu()">Voltar</button>
+        </section>
+
+        <section id="formulario3" style="display: none;">
+
+            <p class="entrada">Horário de Entrada:</p>
+            <input type="time" id="entrada" required>
+
+            <p class="saidaAlmoco">Saída para Almoço:</p>
+            <input type="time" id="saidaAlmoco" required>
+
+            <p class="voltaAlmoco">Volta do Almoço:</p>
+            <input type="time" id="voltaAlmoco" required>
+
+            <p class="horasTrabalho">Total de Horas de Trabalho (hh:mm)</p>
+            <input type="time" id="horasTrabalho" required>
+
+            <button class="btn" onclick="calcularSaida()">Calcular Horário de Saída</button>
+
+            <p class="resultado" id="resultado3"></p>
+            
+            <button class="btn btn-voltar" onclick="voltarMenu()">Voltar</button>
+        </section>
+    </main>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
