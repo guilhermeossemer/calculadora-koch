@@ -45,7 +45,7 @@ section p, label {
 }
 
 input::placeholder {
-    font-size: 1em;
+    font-size: .8em;
 }
 
 section input[type="number"],
@@ -56,7 +56,7 @@ section input[type="time"],
     margin-top: 0.4rem;
     border: 1px solid var(--secondary-color);
     border-radius: 5px;
-    font-size: .8em;
+    font-size: 1.3em;
     outline: none;
     text-align: center;
 }
