@@ -16,11 +16,12 @@
     </header>
 
     <main>
-        
+
         <section id="menu">
             <button class="btn" onclick="mostrarFormulario(1)">Calculadora com cx de papelão</button>
             <button class="btn" onclick="mostrarFormulario(2)">Calculadora sem cx de papelão</button>
             <button class="btn" onclick="mostrarFormulario(3)">Calculadora horário</button>
+            <button class="btn" onclick="mostrarFormulario(4)">Calculadora Shelf life</button>
         </section>
 
         <section id="formulario1" style="display: none;">
@@ -70,7 +71,20 @@
             <button class="btn" onclick="calcularSaida()">Calcular Horário de Saída</button>
 
             <p class="resultado" id="resultado3"></p>
-            
+
+            <button class="btn btn-voltar" onclick="voltarMenu()">Voltar</button>
+        </section>
+
+        <section id="formulario4" style="display: none;">
+            <h2>Calculadora de Shelf Life</h2>
+            <p for="fabricacao">Data de Fabricação:</p>
+            <input type="date" id="fabricacao">
+            <br>
+            <p for="validade">Data de Validade:</p>
+            <input type="date" id="validade">
+            <br>
+            <button class="btn" onclick="calcularShelfLife()">Calcular</button>
+            <p class="resultado" id="resultado4"></p>
             <button class="btn btn-voltar" onclick="voltarMenu()">Voltar</button>
         </section>
     </main>

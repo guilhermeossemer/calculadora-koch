@@ -3,6 +3,7 @@ function mostrarFormulario(opcao) {
     document.getElementById("formulario1").style.display = opcao === 1 ? "block" : "none";
     document.getElementById("formulario2").style.display = opcao === 2 ? "block" : "none";
     document.getElementById("formulario3").style.display = opcao === 3 ? "block" : "none";
+    document.getElementById("formulario4").style.display = opcao === 4 ? "block" : "none";
 }
 
 function voltarMenu() {
@@ -10,6 +11,7 @@ function voltarMenu() {
     document.getElementById("formulario1").style.display = "none";
     document.getElementById("formulario2").style.display = "none";
     document.getElementById("formulario3").style.display = "none";
+    document.getElementById("formulario4").style.display = "none";
 }
 
 function calcularTaraPapelao() {
@@ -82,4 +84,22 @@ function calcularSaida() {
     const horarioSaida = `${String(horarioSaidaHoras).padStart(2, '0')}:${String(horarioSaidaMinutos).padStart(2, '0')}`;
 
     document.getElementById("resultado3").textContent = "Horário de Saída: " + horarioSaida;
+
+    // Calcula o tempo trabalhado
+}
+function calcularShelfLife() {
+    const fabricacao = new Date(document.getElementById("fabricacao").value);
+    const validade = new Date(document.getElementById("validade").value);
+
+    if (isNaN(fabricacao) || isNaN(validade)) {
+        document.getElementById("resultado4").innerText = "Por favor, insira datas válidas.";
+        return;
+    }
+
+    const diferenca = (validade - fabricacao) / (1000 * 60 * 60 * 24); // Diferença em dias
+    const shelfLife = Math.floor(diferenca * 0.33); // 70% do tempo total
+    const dataLimite = new Date(fabricacao);
+    dataLimite.setDate(fabricacao.getDate() + shelfLife);
+
+    document.getElementById("resultado4").innerText = `Bom para receber até: ${dataLimite.toLocaleDateString("pt-BR")}`;
 }

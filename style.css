@@ -38,27 +38,32 @@ main {
     text-align: center;
 }
 
-section p, label {
+section p {
     margin-top: .5rem;
     font-size: 1em;
     color: #333333;
 }
 
 input::placeholder {
-    font-size: 1em;
+    font-size: .8em;
 }
 
 section input[type="number"],
 section input[type="time"],
+section input[type="date"],
 .btn {
     width: 100%;
     padding: 0.4rem;
     margin-top: 0.4rem;
     border: 1px solid var(--secondary-color);
     border-radius: 5px;
-    font-size: .8em;
+    font-size: 1.3em;
     outline: none;
     text-align: center;
+}
+
+section input[type="time"]{
+    font-size: 1.6em;
 }
 
 section input[type="number"]:focus,
@@ -93,7 +98,7 @@ section input[type="time"]:focus,
     display: flex;
     height: 2rem;
     margin-top: .5rem;
-    font-size: 1.2em;
+    font-size: 1.4em;
     color: var(--primary-color);
     border: 1px solid var(--secondary-color);
     border-radius: 5px;
